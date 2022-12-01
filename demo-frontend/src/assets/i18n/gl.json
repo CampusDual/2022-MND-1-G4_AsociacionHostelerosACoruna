@@ -23,7 +23,7 @@
   "table": {
     "contacts": {
       "name": "Nome",
-      "surname1": "Primeiro apelido",
+      "surname1": "CIF",
       "surname2": "Segundo apelido",
       "phone": "Teléfono",
       "email": "E-Mail"
@@ -60,7 +60,7 @@
   "NAME_REQUIRED" :"Nome obrigatorio",
   "ID_NOT_EXISTS" :"Id non existe",
   "ID_REQUIRED" :"Id obrigatorio",
-  "SURNAME1_REQUIRED" :"Primeiro apelido obrigatorio",
+  "SURNAME1_REQUIRED" :"CIF obrigatorio",
   "SURNAME2_REQUIRED" :"Segundo apelido obrigatorio",
   "PHONE_REQUIRED" :"Teléfono obrigatorio",
   "PHONE_INVALID" :"Teléfono inválido",
@@ -82,7 +82,7 @@
   "yes": "Si",
   "delete-element-confirmation": "¿Está seguro de que quere continuar? Todos os elementos seleccionados eliminaranse",
   "namerequired": "O nome é un campo obrigatorio",
-  "surname1required": "O apelido é un campo obrigatorio",
+  "surname1required": "O CIF é un campo obrigatorio",
   "phonerequired":"O teléfono é un campo requirido",
   "phonepattern": "O formato do teléfono non é correcto",
   "emailpattern": "O formato do email non é correcto"

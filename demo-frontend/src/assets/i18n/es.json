@@ -23,10 +23,7 @@
   "table": {
     "contacts": {
       "name": "Nombre",
-      "surname1": "Primer apellido",
-      "surname2": "Segundo apellido",
-      "phone": "Teléfono",
-      "email": "E-Mail"
+      "surname1": "CIF"
     }
   },
   "form": {

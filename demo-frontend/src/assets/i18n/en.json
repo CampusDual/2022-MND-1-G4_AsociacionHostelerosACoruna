@@ -23,7 +23,7 @@
   "table": {
     "contacts": {
       "name": "Name",
-      "surname1": "First Surname",
+      "surname1": "CIF",
       "surname2": "Second Surname",
       "phone": "Phone",
       "email": "E-Mail"
@@ -63,7 +63,7 @@
   "ID_NOT_EXISTS" :"Id doesn't exist",
   "ID_REQUIRED" :"Mandatory",
   "SURNAME1_REQUIRED" :"Mandatory first name",
-  "SURNAME2_REQUIRED" :"Mandatory surname",
+  "SURNAME2_REQUIRED" :"Mandatory CIF",
   "PHONE_REQUIRED" :"Mandatory phone",
   "PHONE_INVALID" :"Invalid phone",
   "EMAIL_REQUIRED" :"Mandatory email",
@@ -82,7 +82,7 @@
   "yes": "Yes",
   "delete-element-confirmation": "Are you sure you want to continue? All selected elements will be deleted",
   "namerequired": "Name is a required field",
-  "surname1required": "Surname is a required field",
+  "surname1required": "CIF is a required field",
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
   "emailpattern": "The email format is not correct"
