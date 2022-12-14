@@ -30,7 +30,7 @@
     }
   },
   "form": {
-    "contact": "Contacto"
+    "contact": "Local"
   },
   "button": {
     "cancel": "Cancelar",
@@ -50,13 +50,13 @@
   "USER_NOT_EXISTS": "O usuario non existe na base de datos",
   "WRONG_PASSWORD": "Contrasinal incorrecta",
   "TOKEN_EXPIRED": "A sesión expirou",
-  "CONTACT_EDIT_SUCCESS":"Contacto editado",
-  "CONTACT_CREATE_SUCCESS": "Contacto creado",
-  "CONTACT_DELETE_SUCCESS": "Contacto borrado",
-  "CONTACT_NOT_EDIT": "Erro ao editar o contacto",
-  "CONTACT_NOT_DELETE": "Contacto non borrado",
-  "CONTACT_NOT_CREATED": "Contacto non creado",
-  "USER_EDIT_SUCCESS": "Usuario editado",
+  "CONTACT_EDIT_SUCCESS":"Local editado",
+  "CONTACT_CREATE_SUCCESS": "Local creado",
+  "CONTACT_DELETE_SUCCESS": "Local borrado",
+  "CONTACT_NOT_EDIT": "Erro ao editar o local",
+  "CONTACT_NOT_DELETE": "Local non borrado",
+  "CONTACT_NOT_CREATED": "Local non creado",
+  "USER_EDIT_SUCCESS": "Local editado",
   "NAME_REQUIRED" :"Nome obrigatorio",
   "ID_NOT_EXISTS" :"Id non existe",
   "ID_REQUIRED" :"Id obrigatorio",
@@ -66,9 +66,9 @@
   "PHONE_INVALID" :"Teléfono inválido",
   "EMAIL_REQUIRED" :"Email obrigatorio",
   "EMAIL_INVALID" :"Email invalido",
-  "CONTACT_NOT_EXISTS" :"Contacto non existe",
-  "CONTACT_ALREADY_EXISTS" :"Contacto xa existe",
-  "CONTACT_CONSTRAINT_VIOLATION" :"Violación de restrición de contacto",
+  "CONTACT_NOT_EXISTS" :"O local non existe",
+  "CONTACT_ALREADY_EXISTS" :"O local xa existe",
+  "CONTACT_CONSTRAINT_VIOLATION" :"Violación de restrición do local",
   "PHONE_ALREADY_EXISTS": "O teléfono xa existe",
   "UNKNOWN_ERROR": "Erro descoñecido",
   "SESSION_EXPIRED": "Sesión expirada",

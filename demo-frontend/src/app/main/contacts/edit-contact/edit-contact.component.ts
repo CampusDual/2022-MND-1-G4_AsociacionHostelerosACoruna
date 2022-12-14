@@ -52,9 +52,6 @@ export class EditContactComponent implements OnInit {
       id: [this.contact.id],
       name: [this.contact.name, Validators.required],
       surname1: [this.contact.surname1],
-      surname2: [this.contact.surname2],
-      phone: [this.contact.phone, [Validators.required, Validators.pattern("^[0-9]{9}$")]],
-      email: [this.contact.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")],
     });
   }
 

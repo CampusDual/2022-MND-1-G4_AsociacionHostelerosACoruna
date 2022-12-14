@@ -12,7 +12,7 @@
   },
   "menu": {
     "home": "Home",
-    "contacts": "Contactos",
+    "contacts": "Locales",
     "logout": "Cerrar sesión"
   },
   "language": {
@@ -27,7 +27,7 @@
     }
   },
   "form": {
-    "contact": "Contacto"
+    "contact": "Local"
   },
   "button": {
     "cancel": "Cancelar",
@@ -44,28 +44,28 @@
   "EN": "Inglés",
   "ES": "Español",
   "GL": "Gallego",
-  "USER_NOT_EXISTS": "El usuario no existe en la base de datos",
+  "USER_NOT_EXISTS": "El local no existe en la base de datos",
   "WRONG_PASSWORD": "Contraseña incorrecta",
   "TOKEN_EXPIRED": "La sesión expiró",
-  "CONTACT_EDIT_SUCCESS":"Contacto editado",
-  "CONTACT_CREATE_SUCCESS": "Contacto creado",
-  "CONTACT_DELETE_SUCCESS": "Contacto borrado",
-  "CONTACT_NOT_EDIT": "Error al editar el contacto",
-  "CONTACT_NOT_DELETE": "Contacto no borrado",
-  "USER_EDIT_SUCCESS": "Usuario editado",
-  "CONTACT_NOT_CREATED": "Contacto no creado",
+  "CONTACT_EDIT_SUCCESS":"Local editado",
+  "CONTACT_CREATE_SUCCESS": "Local creado",
+  "CONTACT_DELETE_SUCCESS": "Local borrado",
+  "CONTACT_NOT_EDIT": "Error al editar el local",
+  "CONTACT_NOT_DELETE": "Local no borrado",
+  "USER_EDIT_SUCCESS": "Local editado",
+  "CONTACT_NOT_CREATED": "Local no creado",
   "NAME_REQUIRED" :"Nombre obligatorio",
   "ID_NOT_EXISTS" :"Id no existe",
   "ID_REQUIRED" :"Id obligatorio",
-  "SURNAME1_REQUIRED" :"Primer apellido obligatorio",
+  "SURNAME1_REQUIRED" :"Primer CIF obligatorio",
   "SURNAME2_REQUIRED" :"Segundo apellido obligatorio",
   "PHONE_REQUIRED" :"Teléfono obrigatorio",
   "PHONE_INVALID" :"Teléfono inválido",
   "EMAIL_REQUIRED" :"Email obligatorio",
   "EMAIL_INVALID" :"Email inválido",
-  "CONTACT_NOT_EXISTS" :"Contacto no existe",
-  "CONTACT_ALREADY_EXISTS" :"Contacto ya existe",
-  "CONTACT_CONSTRAINT_VIOLATION" :"Violación de restricción de contacto",
+  "CONTACT_NOT_EXISTS" :"Local no existe",
+  "CONTACT_ALREADY_EXISTS" :"Local ya existe",
+  "CONTACT_CONSTRAINT_VIOLATION" :"Violación de restricción de local",
   "PHONE_ALREADY_EXISTS": "El teléfono ya existe",
   "UNKNOWN_ERROR": "Error desconocido",
   "SESSION_EXPIRED": "Sesión expirada",
@@ -79,7 +79,7 @@
   "yes": "Si",
   "delete-element-confirmation": "¿Está seguro de que quiere continuar? Todos los elementos seleccionados se eliminarán",
   "namerequired": "El nombre es un campo obligatorio",
-  "surname1required": "El apellido es un campo obligatorio",
+  "surname1required": "El CIF es un campo obligatorio",
   "phonerequired":"El teléfono es un campo obligatorio",
   "phonepattern": "El formato del teléfono no es correcto",
   "emailpattern": "El formato del email no es correcto"
