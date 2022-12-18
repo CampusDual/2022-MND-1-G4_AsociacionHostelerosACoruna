@@ -29,9 +29,10 @@ export class ContactsComponent implements OnInit, AfterViewInit {
   displayedColumns = [
     'select',
     'name',
-    'surname1'
+    'surname1',
+    'login',
   ];
-  fields = ['name', 'surname1'];
+  fields = ['name', 'surname1', 'login,'];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;

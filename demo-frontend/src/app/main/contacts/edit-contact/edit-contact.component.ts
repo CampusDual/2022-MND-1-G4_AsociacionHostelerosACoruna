@@ -52,6 +52,8 @@ export class EditContactComponent implements OnInit {
       id: [this.contact.id],
       name: [this.contact.name, Validators.required],
       surname1: [this.contact.surname1],
+      login: [this.contact.login],
+      password: [this.contact.password],
     });
   }
 

@@ -57,7 +57,7 @@
   "NAME_REQUIRED" :"Nombre obligatorio",
   "ID_NOT_EXISTS" :"Id no existe",
   "ID_REQUIRED" :"Id obligatorio",
-  "SURNAME1_REQUIRED" :"Primer CIF obligatorio",
+  "SURNAME1_REQUIRED" :"CIF obligatorio",
   "SURNAME2_REQUIRED" :"Segundo apellido obligatorio",
   "PHONE_REQUIRED" :"Teléfono obrigatorio",
   "PHONE_INVALID" :"Teléfono inválido",

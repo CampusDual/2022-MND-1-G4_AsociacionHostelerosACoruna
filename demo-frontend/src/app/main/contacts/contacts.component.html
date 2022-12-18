@@ -83,6 +83,16 @@
         </mat-cell>
       </ng-container>
 
+      
+      <ng-container matColumnDef="login">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>
+          {{ "Login" | translate }}
+        </mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="login">
+          {{ row.login }}
+        </mat-cell>
+      </ng-container>
+
 
       <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row

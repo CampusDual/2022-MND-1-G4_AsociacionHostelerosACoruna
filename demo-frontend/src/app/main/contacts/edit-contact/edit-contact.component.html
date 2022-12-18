@@ -21,8 +21,29 @@
                   {{'surname1required'| translate}}
                 </mat-error>
             </mat-form-field>
-       
           </div>
+
+          <div class="input-row">
+            <mat-form-field fxFlex>
+              <input matInput type="text" color="primary" placeholder="{{ 'Login' | translate }}"
+                formControlName="login" name="users-login" required />
+                <mat-error>
+                  {{'login required'| translate}}
+                </mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="input-row">
+            <mat-form-field fxFlex>
+              <input matInput type="text" color="primary" placeholder="{{ 'Password' | translate }}"
+                formControlName="password" name="user-password" required />
+                <mat-error>
+                  {{'password required'| translate}}
+                </mat-error>
+            </mat-form-field>
+          </div>
+
+
         </mat-card-content>
         <mat-card-actions>
           <div fclass="input-row" xLayoutGap="20px" fxLayoutAlign="center center">
