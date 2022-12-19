@@ -6,8 +6,9 @@ import { environment } from 'src/environments/environment';
 import { AnyPageFilter } from '../model/rest/filter';
 import { DataSourceRESTResponse } from '../model/rest/response';
 import { Contact } from '../model/contact';
-import { CreateContactRequest, EditContactRequest } from '../model/rest/request';
+import { CreateContactRequest, CreateUserRequest, EditContactRequest } from '../model/rest/request';
 import { Buffer } from 'buffer';
+import { User } from '../model/user';
 
 @Injectable({
   providedIn: 'root'
@@ -39,6 +40,7 @@ export class ContactService {
   public createContact(contact: Contact): Observable<any> {
     const url = API_CONFIG.createContact;
     const body: CreateContactRequest = new CreateContactRequest(contact);
+    debugger;
     const headers = new HttpHeaders({
       'Content-type': 'application/json; charset=utf-8',
       Authorization: 'Basic ' + Buffer.from(`${environment.clientName}:${environment.clientSecret}`, 'utf8').toString('base64'),

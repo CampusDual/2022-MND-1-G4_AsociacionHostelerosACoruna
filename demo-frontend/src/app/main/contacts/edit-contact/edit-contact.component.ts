@@ -5,6 +5,7 @@ import { ContactService } from 'src/app/services/contact.service';
 
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { LoggerService } from 'src/app/services/logger.service';
+import { User } from 'src/app/model/user';
 
 @Component({
   templateUrl: './edit-contact.component.html',
@@ -59,6 +60,7 @@ export class EditContactComponent implements OnInit {
 
   save() {
     const newContact: Contact = Object.assign({}, this.contactForm.value);
+    debugger;
     if (newContact.id) {
       this.contactService.editContact(newContact).subscribe((response) =>{
         this.redirectList(response);

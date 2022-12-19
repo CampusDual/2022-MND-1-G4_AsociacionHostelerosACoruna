@@ -10,10 +10,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.borjaglez.springify.repository.filter.impl.AnyPageFilter;
 import com.borjaglez.springify.repository.specification.SpecificationBuilder;
 import com.example.demo.dto.ContactDTO;
+import com.example.demo.dto.ExtendDTO;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.dto.mapper.ContactMapper;
 import com.example.demo.entity.Contact;
 import com.example.demo.repository.ContactRepository;
 import com.example.demo.rest.response.DataSourceRESTResponse;
+import com.example.demo.utils.CipherUtils;
 
 @Service
 public class ContactServiceImpl extends AbstractDemoService implements IContactService {
@@ -55,8 +58,23 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 	@Override
 	@Transactional
 
-	public ContactDTO createContact(ContactDTO createContactRequestDTO) {
-		Contact newContact = ContactMapper.INSTANCE.contactDTOtoContact(createContactRequestDTO);
+	public ContactDTO createContact(ExtendDTO extenddto) {
+
+    	CipherUtils cipher = new CipherUtils();
+		ContactDTO contTemp = new ContactDTO();
+		contTemp.setName(extenddto.getName());
+		contTemp.setSurname1(extenddto.getSurname1());
+		
+		UserDTO userd = new UserDTO();
+		userd.setLogin(extenddto.getLogin());
+		userd.setPassword(cipher.encrypt(extenddto.getLogin(), extenddto.getPassword()));
+		
+		
+		Contact newuser = ContactMapper.INSTANCE.contactDTOtoContact(createContactRequestDTO);
+		Contact user = contactRepository.save(newuser);
+		UserDTO newuser =  ContactMapper.INSTANCE.contactToContactDto(contact);
+		
+		Contact newContact = ContactMapper.INSTANCE.contactDTOtoContact(contTemp);
 		Contact contact = contactRepository.save(newContact);
 		return ContactMapper.INSTANCE.contactToContactDto(contact);
 	}

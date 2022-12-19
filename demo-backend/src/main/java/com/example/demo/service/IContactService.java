@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.borjaglez.springify.repository.filter.impl.AnyPageFilter;
 import com.example.demo.dto.ContactDTO;
+import com.example.demo.dto.ExtendDTO;
 import com.example.demo.rest.response.DataSourceRESTResponse;
 
 public interface IContactService {
@@ -33,7 +34,7 @@ public interface IContactService {
 	 * @return el id del usuario creado.
 	 * @since 0.0.5
 	 */
-	ContactDTO createContact(ContactDTO createContactRequest);
+	ContactDTO createContact(ExtendDTO createContactRequest);
 
 
 	/**

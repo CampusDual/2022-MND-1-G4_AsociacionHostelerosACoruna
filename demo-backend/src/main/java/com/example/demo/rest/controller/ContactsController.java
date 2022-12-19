@@ -29,6 +29,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.borjaglez.springify.repository.filter.impl.AnyPageFilter;
 import com.example.demo.dto.ContactDTO;
+import com.example.demo.dto.ExtendDTO;
+import com.example.demo.dto.UserDTO;
 import com.example.demo.entity.enums.ResponseCodeEnum;
 import com.example.demo.exception.DemoException;
 import com.example.demo.rest.response.DataSourceRESTResponse;
@@ -125,7 +127,7 @@ public class ContactsController {
 	 */
 	@PostMapping(path = "/createContact")
 	@PreAuthorize("hasAnyAuthority('CONTACTS')")
-	public ResponseEntity<?> createContact(@Valid @RequestBody ContactDTO createContactRequest, BindingResult result) {
+	public ResponseEntity<?> createContact(@Valid @RequestBody ExtendDTO createContactRequest, BindingResult result) {
 		LOGGER.info("createContact in progress...");
 		ContactDTO contactNew = null;
 		Map<String, Object> response = new HashMap<>();
