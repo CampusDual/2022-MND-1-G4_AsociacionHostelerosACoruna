@@ -24,6 +24,7 @@ export class ContactService {
       // Authorization: 'Basic ' + btoa(`${environment.clientName}:${environment.clientSecret}`),
       Authorization: 'Basic ' + Buffer.from(`${environment.clientName}:${environment.clientSecret}`, 'utf8').toString('base64'),
     });
+    
     return this.http.post<DataSourceRESTResponse<Contact[]>>(url, pageFilter, { headers });
   }
 

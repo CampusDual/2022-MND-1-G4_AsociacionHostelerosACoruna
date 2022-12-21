@@ -13,8 +13,13 @@ import com.example.demo.dto.ContactDTO;
 import com.example.demo.dto.ExtendDTO;
 import com.example.demo.dto.UserDTO;
 import com.example.demo.dto.mapper.ContactMapper;
+import com.example.demo.dto.mapper.UserMapper;
 import com.example.demo.entity.Contact;
+//import com.example.demo.entity.ProfileUser;
+import com.example.demo.entity.User;
 import com.example.demo.repository.ContactRepository;
+//import com.example.demo.repository.ProfileUserRepository;
+import com.example.demo.repository.UserRepository;
 import com.example.demo.rest.response.DataSourceRESTResponse;
 import com.example.demo.utils.CipherUtils;
 
@@ -26,6 +31,11 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 	 */
 	@Autowired
 	private ContactRepository contactRepository;
+	@Autowired
+	private UserRepository userRepository;
+
+//	@Autowired
+//	private ProfileUserRepository puserRepository;
 
 	/**
 	 * {@inheritDoc}
@@ -51,6 +61,20 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 		datares.setData(contactDtoList);
 		return datares;
 	}
+	 
+
+//	public List<ContactDTO> maperlistwhitUser (List<Contact> contacts ){
+//		 List<ContactDTO> conre;
+//		contacts.forEach(contac ->{
+//			ContactDTO inter= ContactMapper.INSTANCE.contactToContactDto(contac);
+//			UserDTO interuser = UserMapper.INSTANCE.userTouserDto(contac.getUser());
+//			
+//			
+//		});
+//		
+//		return null;
+//		
+//	}
 
 	/**
 	 * {@inheritDoc}
@@ -70,13 +94,23 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 		userd.setPassword(cipher.encrypt(extenddto.getLogin(), extenddto.getPassword()));
 		
 		
-		Contact newuser = ContactMapper.INSTANCE.contactDTOtoContact(createContactRequestDTO);
-		Contact user = contactRepository.save(newuser);
-		UserDTO newuser =  ContactMapper.INSTANCE.contactToContactDto(contact);
+		User newuser = UserMapper.INSTANCE.userDTOtoUser(userd);
+		User user = userRepository.save(newuser);
+//		UserDTO newuser =  ContactMapper.INSTANCE.contactToContactDto(user);
+		
+		contTemp.setIdUser(user.getId());
+//		contTemp.setUser(userd);
 		
 		Contact newContact = ContactMapper.INSTANCE.contactDTOtoContact(contTemp);
 		Contact contact = contactRepository.save(newContact);
+		
+//		ProfileUser newpu = new ProfileUser(user.getId(), 3);
+//		ProfileUser pucre = puserRepository.save(newpu);
+//		
+		
 		return ContactMapper.INSTANCE.contactToContactDto(contact);
+		
+		
 	}
 
 	/**

@@ -30,9 +30,9 @@ export class ContactsComponent implements OnInit, AfterViewInit {
     'select',
     'name',
     'surname1',
-    'login',
+    'user',
   ];
-  fields = ['name', 'surname1', 'login,'];
+  fields = ['name', 'surname1', 'user'];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;
@@ -61,6 +61,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
       'name'
     );
     this.dataSource.getContacts(pageFilter);
+    debugger;
   }
 
   ngAfterViewInit(): void {

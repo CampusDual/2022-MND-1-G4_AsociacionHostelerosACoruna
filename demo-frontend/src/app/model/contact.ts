@@ -1,3 +1,5 @@
+import { User } from "./user";
+
 export class Contact {
   id: number;
   name: string;
@@ -7,4 +9,5 @@ export class Contact {
   surname2: string;
   phone: number;
   email: string;
+  user: User;
 }

@@ -23,6 +23,7 @@ export class ContactDataSource extends DataSource<Contact> {
     ).subscribe(
       response => {
         this.totalElements = response.totalElements;
+        debugger
         this.contactsSubject.next(response.data);
       }
     );

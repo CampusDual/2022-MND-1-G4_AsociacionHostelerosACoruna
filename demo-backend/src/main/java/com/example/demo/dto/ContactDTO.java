@@ -13,6 +13,21 @@ public class ContactDTO {
 	@NotEmpty(message = Constant.SURNAME1_REQUIRED)
 	private String surname1;
 	
+	private Integer idUser;
+	
+
+	private UserDTO user;
+	
+	public Integer getIdUser() {
+		return idUser;
+	}
+
+
+	public void setIdUser(Integer idUser) {
+		this.idUser = idUser;
+	}
+
+
 	public Integer getId() {
 		return id;
 	}
@@ -35,5 +50,15 @@ public class ContactDTO {
 	}
 	public void setSurname1 (String surname1) {
 		this.surname1 = surname1;
+	}
+
+
+	public UserDTO getUser() {
+		return user;
+	}
+
+
+	public void setUser(UserDTO user) {
+		this.user = user;
 	}
 }
