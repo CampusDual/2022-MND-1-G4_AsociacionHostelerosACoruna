@@ -60,6 +60,8 @@ public interface IContactService {
 	 * @return el id del usuario modificado.
 	 * @since 0.0.5
 	 */
-	Integer editContact(ContactDTO editContactRequest);
+	Integer editContact(ExtendDTO editContactRequest);
+
+	ExtendDTO getExteds(Integer id);
 	
 }

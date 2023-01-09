@@ -57,11 +57,11 @@ public class ContactsController {
 	@PreAuthorize("hasAnyAuthority('CONTACTS')")
 	public ResponseEntity<?> getContact(@RequestParam(value = "id") Integer id) {
 		LOGGER.info("getContact in progress...");
-		ContactDTO contact = null;
+		ExtendDTO contact = null;
 		Map<String, Object> response = new HashMap<>();
 		ResponseEntity<?> re = null;
 		try {
-			contact = contactService.getContact(id);
+			contact = contactService.getExteds(id);
 			if (contact == null) {
 				response.put(Constant.MESSAGE, Constant.CONTACT_NOT_EXISTS);
 				response.put(Constant.RESPONSE_CODE, ResponseCodeEnum.KO.getValue());
@@ -177,7 +177,7 @@ public class ContactsController {
 	 */
 	@PostMapping(path = "/editContact", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	@PreAuthorize("hasAnyAuthority('CONTACTS')")
-	public ResponseEntity<Map<String, Object>> editContact(@Valid @RequestBody ContactDTO editContactRequest, BindingResult result) {
+	public ResponseEntity<Map<String, Object>> editContact(@Valid @RequestBody ExtendDTO editContactRequest, BindingResult result) {
 		LOGGER.info("editContact in progress...");
 		int id = 0;
 		ContactDTO contactOlder = contactService.getContact(editContactRequest.getId());

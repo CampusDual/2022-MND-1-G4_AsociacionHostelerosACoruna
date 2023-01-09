@@ -6,24 +6,7 @@ import com.example.demo.utils.Constant;
 
 public class ExtendDTO {
 
-	public String getLogin() {
-		return login;
-	}
-
-
-	public void setLogin(String login) {
-		this.login = login;
-	}
-
-
-	public String getPassword() {
-		return password;
-	}
-
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+	
 	private Integer id;
 	@NotEmpty(message = Constant.NAME_REQUIRED)
 	private String name;
@@ -38,6 +21,17 @@ public class ExtendDTO {
 	@NotEmpty(message = Constant.SURNAME1_REQUIRED)
 	private String password;
 	
+	public ExtendDTO() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public ExtendDTO( int id, String name, String surname1, String login, String password) {	
+		this.id = id;
+		this.name = name;
+		this.surname1 = surname1;
+		this.login = login;
+		this.password = password;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -60,5 +54,23 @@ public class ExtendDTO {
 	}
 	public void setSurname1 (String surname1) {
 		this.surname1 = surname1;
+	}
+	public String getLogin() {
+		return login;
+	}
+
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+
+	public String getPassword() {
+		return password;
+	}
+
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

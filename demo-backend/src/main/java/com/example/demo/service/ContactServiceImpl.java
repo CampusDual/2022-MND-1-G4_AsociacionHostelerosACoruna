@@ -1,7 +1,10 @@
 package com.example.demo.service;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
+import org.hibernate.mapping.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
@@ -15,6 +18,7 @@ import com.example.demo.dto.UserDTO;
 import com.example.demo.dto.mapper.ContactMapper;
 import com.example.demo.dto.mapper.UserMapper;
 import com.example.demo.entity.Contact;
+import com.example.demo.entity.Profile;
 //import com.example.demo.entity.ProfileUser;
 import com.example.demo.entity.User;
 import com.example.demo.repository.ContactRepository;
@@ -22,7 +26,7 @@ import com.example.demo.repository.ContactRepository;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.rest.response.DataSourceRESTResponse;
 import com.example.demo.utils.CipherUtils;
-
+//
 @Service
 public class ContactServiceImpl extends AbstractDemoService implements IContactService {
 
@@ -44,6 +48,15 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 	public ContactDTO getContact(Integer id) {
 		Contact contact = contactRepository.findById(id).orElse(null);
 		return ContactMapper.INSTANCE.contactToContactDto(contact);
+	}
+	
+	@Override
+	public ExtendDTO getExteds(Integer id) {
+		Contact contact = contactRepository.findById(id).orElse(null);
+		ContactDTO nuevo = ContactMapper.INSTANCE.contactToContactDto(contact);
+		CipherUtils cipher = new CipherUtils();
+		String desencriptado = cipher.decrypt(nuevo.getUser().getLogin(), nuevo.getUser().getPassword());
+		return new ExtendDTO(nuevo.getId(), nuevo.getName(), nuevo.getSurname1(), nuevo.getUser().getLogin(), desencriptado);
 	}
 
 	/**
@@ -94,7 +107,11 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 		userd.setPassword(cipher.encrypt(extenddto.getLogin(), extenddto.getPassword()));
 		
 		
+		
 		User newuser = UserMapper.INSTANCE.userDTOtoUser(userd);
+		java.util.Set<Profile> a =new HashSet<Profile> ();
+		a.add(new Profile(3));
+		newuser.setProfiles(a);
 		User user = userRepository.save(newuser);
 //		UserDTO newuser =  ContactMapper.INSTANCE.contactToContactDto(user);
 		
@@ -103,10 +120,6 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 		
 		Contact newContact = ContactMapper.INSTANCE.contactDTOtoContact(contTemp);
 		Contact contact = contactRepository.save(newContact);
-		
-//		ProfileUser newpu = new ProfileUser(user.getId(), 3);
-//		ProfileUser pucre = puserRepository.save(newpu);
-//		
 		
 		return ContactMapper.INSTANCE.contactToContactDto(contact);
 		
@@ -132,10 +145,27 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 	}
 
 	@Override
-	public Integer editContact(ContactDTO editContactRequest) {
-		Contact contact = ContactMapper.INSTANCE.contactDTOtoContact(editContactRequest);
-		Contact editContact = contactRepository.save(fromEditContactRequest(contact));
+	public Integer editContact(ExtendDTO editContactRequest) {
+		
+		CipherUtils cipher = new CipherUtils();
+		ContactDTO contTemp = new ContactDTO();
+		contTemp.setId(editContactRequest.getId());
+		contTemp.setName(editContactRequest.getName());
+		contTemp.setSurname1(editContactRequest.getSurname1());
+		Integer idUser = getContact(editContactRequest.getId()).getIdUser();
+		contTemp.setIdUser(idUser);
+		
+		UserDTO userd = new UserDTO();
+		userd.setLogin(editContactRequest.getLogin());
+		userd.setId(idUser);
+		userd.setPassword(cipher.encrypt(editContactRequest.getLogin(), editContactRequest.getPassword()));
+		contTemp.setUser(userd);
+		Contact contact = ContactMapper.INSTANCE.contactDTOtoContact(contTemp);
+//		contact.setIdUser(idUser);
+		Contact editContact = contactRepository.save(contact);
+//		Contact editContact = contactRepository.save(fromEditContactRequest(contact));
 		return editContact.getId();
+//		return null;
 	}
 
 }
