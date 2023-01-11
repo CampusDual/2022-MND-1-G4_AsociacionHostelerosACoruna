@@ -159,9 +159,13 @@ public class ContactServiceImpl extends AbstractDemoService implements IContactS
 		userd.setLogin(editContactRequest.getLogin());
 		userd.setId(idUser);
 		userd.setPassword(cipher.encrypt(editContactRequest.getLogin(), editContactRequest.getPassword()));
+		
 		contTemp.setUser(userd);
 		Contact contact = ContactMapper.INSTANCE.contactDTOtoContact(contTemp);
 //		contact.setIdUser(idUser);
+		java.util.Set<Profile> a =new HashSet<Profile> ();
+		a.add(new Profile(3));
+		contact.getUser().setProfiles(a);
 		Contact editContact = contactRepository.save(contact);
 //		Contact editContact = contactRepository.save(fromEditContactRequest(contact));
 		return editContact.getId();

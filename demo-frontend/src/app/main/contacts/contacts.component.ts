@@ -32,7 +32,7 @@ export class ContactsComponent implements OnInit, AfterViewInit {
     'surname1',
     'user',
   ];
-  fields = ['name', 'surname1', 'user'];
+  fields = ['name', 'surname1', 'user.login'];
 
   selection = new SelectionModel<Contact>(true, []);
   error = false;
