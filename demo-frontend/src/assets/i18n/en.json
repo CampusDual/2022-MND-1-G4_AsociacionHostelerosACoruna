@@ -8,11 +8,11 @@
     "title": "Title"
   },
   "demo": {
-    "title": "Demo"
+    "title": "AHC"
   },
   "menu": {
     "home": "Home",
-    "contacts": "Contacts",
+    "locales": "Pubs",
     "logout": "Logout"
   },
   "language": {
@@ -24,9 +24,7 @@
     "contacts": {
       "name": "Name",
       "surname1": "CIF",
-      "surname2": "Second Surname",
-      "phone": "Phone",
-      "email": "E-Mail"
+      "login": "User"
     }
   },
   "form": {
@@ -85,5 +83,8 @@
   "surname1required": "CIF is a required field",
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
-  "emailpattern": "The email format is not correct"
+  "emailpattern": "The email format is not correct",
+  "texto1": "The Association of Hoteliers of A Coruña brings together the different hotel establishments related to nightlife in the province of A Coruña, united to jointly promote and defend the common interests of all its members.",
+  "Titulo1": "A Coruña Hoteliers Association",
+  "Password": "Password"
 }

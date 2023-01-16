@@ -33,8 +33,8 @@ export class NavComponent implements OnInit, OnDestroy {
     {
       icon: 'people',
       route: 'contacts',
-      title: 'Locales',
-      allowedRoles: ['CONTACTS']
+      title: 'menu.locales',
+      allowedRoles: ['CONTACTS', 'HOME']
     },
   ];
 

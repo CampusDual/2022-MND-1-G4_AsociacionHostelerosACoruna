@@ -8,11 +8,11 @@
     "title": "Titulo"
   },
   "demo": {
-    "title": "Demo"
+    "title": "AHC"
   },
   "menu": {
-    "home": "Home",
-    "contacts": "Contactos",
+    "home": "Inicio",
+    "locales": "Locais",
     "logout": "Pechar sesión"
   },
   "language": {
@@ -24,11 +24,10 @@
     "contacts": {
       "name": "Nome",
       "surname1": "CIF",
-      "surname2": "Segundo apelido",
-      "phone": "Teléfono",
-      "email": "E-Mail"
+      "login": "Usuario"
     }
   },
+
   "form": {
     "contact": "Local"
   },
@@ -85,5 +84,8 @@
   "surname1required": "O CIF é un campo obrigatorio",
   "phonerequired":"O teléfono é un campo requirido",
   "phonepattern": "O formato do teléfono non é correcto",
-  "emailpattern": "O formato do email non é correcto"
+  "emailpattern": "O formato do email non é correcto",
+  "texto1": "A Asociación de Hosteleiros de A Coruña agrupa os diferentes establecementos de hostelería referentes ao ocio nocturno da provincia de A Coruña, unidos para promover e defender conxuntamente os intereses comúns de todos os membros que a integran.",
+  "Titulo1": "Asociación de Hosteleiros de A Coruña",
+  "Password": "Contrasinal"
 }
