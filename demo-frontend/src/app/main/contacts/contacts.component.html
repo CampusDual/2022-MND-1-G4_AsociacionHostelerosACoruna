@@ -76,7 +76,7 @@
 
       <ng-container matColumnDef="surname1">
         <mat-header-cell *matHeaderCellDef mat-sort-header>
-          {{ "table.contacts.surname1" | translate }}
+          {{"table.contacts.surname1" | translate }}
         </mat-header-cell>
         <mat-cell *matCellDef="let row" data-label="surname1">
           {{ row.surname1 }}
@@ -84,7 +84,7 @@
       </ng-container>
 
       
-      <ng-container matColumnDef="user">
+      <ng-container matColumnDef="user" >
         <mat-header-cell *matHeaderCellDef mat-sort-header>
           {{ "Login" | translate }}
         </mat-header-cell>

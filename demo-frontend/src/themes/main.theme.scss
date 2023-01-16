@@ -61,7 +61,10 @@ body {
   right: 0;
   overflow: auto;
 }
-
+.mat-sort-header {
+  color: black !important;
+  font-size: 0.39cm;
+}
 .list-item-active {
   font-weight: bold;
   color: mat-color($accent, darker) !important;
@@ -69,6 +72,7 @@ body {
 }
 
 .row-link:hover {
+  font-weight: bold;
   background-color: rgba(0, 0, 0, .1);
   cursor: pointer;
 }
@@ -83,6 +87,8 @@ td.mat-cell {
 
 th.mat-header-cell {
   border-bottom-style: none !important;
+  
+  
 }
 
 .table-header-button {
