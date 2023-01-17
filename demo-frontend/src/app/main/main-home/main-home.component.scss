@@ -3,16 +3,23 @@
   // height: 300px;
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
-
-
-
 .sidenav-content {
   // display: flex;
   height: 100%;
   align-items: center;
   justify-content: center;
 }
+#Parte1 {
+  width: 50%;
+}
+#Parte2 {
+  width: 45%;
+  line-height: 30px;
+}
+#Parte3 {
+  width: 4%;
 
+}
 .sidenav {
   padding: 20px;
 }

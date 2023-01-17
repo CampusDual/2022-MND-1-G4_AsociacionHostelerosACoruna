@@ -84,7 +84,14 @@
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
   "emailpattern": "The email format is not correct",
-  "texto1": "La Asociación de Hosteleros de A Coruña brings together the different hotel establishments related to nightlife in the province of A Coruña, united to jointly promote and defend the common interests of all its members.",
+  "texto1": "La Asociación de Hosteleros de A Coruña, agrupa los diferentes establecimientos de hostelería referentes al ocio nocturno de la provincia de A Coruña.",
+  "texto2": "Unidos con el objetivo de promover y defender conjuntamente los intereses comunes de todos los miembros que la integran.",
+  "texto3": "La finalidad de esta asociación es la de crear diferentes rutas de bares, que cuenten con ofertas para el público que se registre.",
+  "texto4": "Actualmente se encuentra dado de alta en la plataforma. El 01/02/2023 se habilitará el acceso al formulario de promociones que aparece a continuación:",
+  "texto5": "Para cualquier duda o consulta no dude en ponerse en contacto con nosotros.",
+  "texto6": "Correo: asociacionbaresdual@campusdual.com",
+  "texto7": "Teléfono: 652 598 754",
+  "textoenlace": "Formulario de Promociones",
   "Titulo1": "Asociación de Hosteleros de A Coruña",
   "Password": "Password"
 }
