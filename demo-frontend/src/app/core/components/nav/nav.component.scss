@@ -2,6 +2,7 @@
 
 .mat-sidenav-container {
   height: 100%;
+ 
 }
 
 // https://github.com/angular/material2/blob/master/src/lib/core/style/_variables.scss
@@ -12,8 +13,11 @@ $sidenav-width: 320px; // 240px;
   width: $sidenav-width;
 }
 
+
 .toolbar-title {
   margin: 0 16px 0 16px;
+
+
 }
 
 .mat-subheader {
