@@ -13,7 +13,7 @@ import { User } from 'src/app/model/user';
 })
 export class EditContactComponent implements OnInit {
   idContact: number;
-
+  hide = true;
   contactForm: FormGroup;
   contact: Contact;
   errores: string[];
