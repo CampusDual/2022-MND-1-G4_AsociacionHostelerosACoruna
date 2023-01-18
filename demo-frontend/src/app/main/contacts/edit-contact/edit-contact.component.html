@@ -28,7 +28,7 @@
               <input matInput type="text" color="primary" placeholder="{{ 'table.contacts.login' | translate }}"
                 formControlName="login" name="users-login" required />
                 <mat-error>
-                  {{'login required'| translate}}
+                  {{ 'LoginRequired' | translate }}
                 </mat-error>
             </mat-form-field>
           </div>
@@ -38,7 +38,7 @@
               <input matInput type="text" color="primary" placeholder="{{ 'Password' | translate }}"
                 formControlName="password" name="user-password" required />
                 <mat-error>
-                  {{'password required'| translate}}
+                  {{ 'PasswordRequired' | translate }}
                 </mat-error>
             </mat-form-field>
           </div>

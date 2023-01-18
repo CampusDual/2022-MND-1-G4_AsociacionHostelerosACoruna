@@ -95,5 +95,7 @@
   "texto7": "Teléfono: 652 598 754",
   "textoenlace": "Formulario de Promocións",
   "Titulo1": "Asociación de Hosteleros de A Coruña",
-  "Password": "Contrasinal"
+  "Password": "Contrasinal",
+  "PasswordRequired":"A Contrasinal é un campo obrigatorio",
+  "LoginRequired":"O Usuario é un campo obrigatorio" 
 }
