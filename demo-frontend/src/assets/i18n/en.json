@@ -84,7 +84,7 @@
   "phonerequired":"Phone is a required field",
   "phonepattern": "The phone format is not correct",
   "emailpattern": "The email format is not correct",
-  "texto1": "The Association of Hoteliers' of A Coruña, brings together the different hotel establishments related to nightlife in the province of A Coruña.",
+  "texto1": "The Asociación de Hosteleros de A Coruña, brings together the different hotel establishments related to nightlife in the province of A Coruña.",
   "texto2": "United with the objective of jointly promoting and defending the common interests of all its members.",
   "texto3": "The finality of this association is to create different routes of bars, with offers for the public that registers.",
   "texto4": "It is currently registered on the platform. On 02/01/2023, access to the promotions form below will be enabled:",
@@ -92,7 +92,7 @@
   "texto6": "E-mail address: asociacionbaresdual@campusdual.com",
   "texto7": "Telephone number: 652 598 754",
   "textoenlace": " Promotions Form",
-  "Titulo1": "Association of Hoteliers' of A Coruña",
+  "Titulo1": "Asociación de Hosteleros de A Coruña",
   "Password": "Password",
   "PasswordRequired":"Password is a required field",
   "LoginRequired":"Login is a required field" 
