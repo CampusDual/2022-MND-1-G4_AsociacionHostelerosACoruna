@@ -52,7 +52,7 @@ export class EditContactComponent implements OnInit {
     this.contactForm = this.fb.group({
       id: [this.contact.id],
       name: [this.contact.name, Validators.required],
-      surname1: [this.contact.surname1, [Validators.required, Validators.pattern("^[a-z A-Z]{1}[0-9]{7}$")]],
+      surname1: [this.contact.surname1, [Validators.required, Validators.pattern("^[a-z A-Z]{1}[0-9]{8}$")]],
       login: [this.contact.login],
       password: [this.contact.password],
     });
