@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  apiBaseUrl: 'http://localhost:9999' ,
-  authBaseUrl: 'http://localhost:9999',
-  adminBaseUrl: 'http://localhost:9999',
-  contactsBaseUrl: 'http://localhost:9999/contacts',
-  loginBaseUrl: 'http://localhost:9999/login',
+  apiBaseUrl: 'http://localhost:30063',
+  authBaseUrl: 'http://localhost:30063',
+  adminBaseUrl: 'http://localhost:30063',
+  contactsBaseUrl: 'http://localhost:30063/contacts',
+  loginBaseUrl: 'http://localhost:30063/login',
   clientName: 'demo',
   clientSecret: '8Fjkk59bXKws8bmMNFZB',
   isDebugMode: false,

@@ -4,15 +4,15 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://45.84.210.174:65432/Master_UDC_2022_G4
+    url: jdbc:postgresql://db:5432/Master_UDC_2022_G4
     username: Master_UDC_2022_G4
     password: 9PVlYwTLPUsA245d!4
   jpa:
     hibernate.ddl-auto: update
-    show-sql: true
+    show-sql: false
     properties:
       hibernate:
-        format_sql: true
+        format_sql: false
         dialect: org.hibernate.dialect.PostgreSQL9Dialect
 
 # oauth2 configuration  
